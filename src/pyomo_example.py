@@ -22,7 +22,7 @@ model.C = Set(initialize=demand.keys())
 model.x = Var(model.S, model.C, domain=NonNegativeReals)
 
 # Defining the objective function
-model.obj = Objective(expr=sum(costs[(i,j)] for i in model.S for j in model.C), sense=minimize)
+model.obj = Objective(expr=sum(costs[(i,j)] * model.x[(i,j)] for i in model.S for j in model.C), sense=minimize)
 
 # Defining the constraints
 model.sup_const = Constraint(
