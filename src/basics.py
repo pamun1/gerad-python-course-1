@@ -93,6 +93,15 @@ lst[0] = 99
 
 print(lst)
 
+# range function
+
+print(range(10))
+
+print(list(range(10)))
+
+print(list(range(4, 10, 2)))
+
+print(list(range(11, 0, -3)))
 
 ## ===============================
 ## Mutability
